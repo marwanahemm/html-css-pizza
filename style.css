@@ -1,0 +1,208 @@
+:root {
+      /* Tailles */
+      --taille-pizza: 400px;
+      --taille-sauce: 340px;
+      
+      /* Couleurs de base */
+      --pate: #e8d4a0;
+      --pate-bord: #c4a860;
+      --sauce: #d63031;
+      
+      /* Garnitures */
+      --viande: #6b3410;
+      --saucisse: #a0341f;
+      --poivron: #27ae60;
+      --olive: #1a1a1a;
+      --oignon: #f4e8d8;
+      --fromage: #ffd93d;
+      --harissa: #ff3838;
+      --basilic: #2d8659;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: white;
+      font-size: 3em;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    
+    /* PIZZA BASE */
+    .pizza {
+      width: var(--taille-pizza);
+      height: var(--taille-pizza);
+      background: var(--pate);
+      border-radius: 50%;
+      position: relative;
+      border: 12px solid var(--pate-bord);
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    /* TOMATO SAUCE */
+    .sauce {
+      width: var(--taille-sauce);
+      height: var(--taille-sauce);
+      background: var(--sauce);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.9;
+    }
+    
+    /* MEAT */
+    .meat {
+      width: 50px;
+      height: 50px;
+      background: var(--viande);
+      border-radius: 60% 40% 50% 50%;
+      position: absolute;
+      opacity: 0.85;
+    }
+    
+    .meat-1 { top: 80px; left: 170px; transform: rotate(20deg); }
+    .meat-2 { top: 160px; left: 80px; transform: rotate(-30deg); }
+    .meat-3 { top: 160px; left: 260px; transform: rotate(45deg); }
+    .meat-4 { top: 260px; left: 170px; transform: rotate(-15deg); }
+    
+    /* SAUCISSES MERGUEZ */
+    .sausage {
+      width: 80px;
+      height: 18px;
+      background: var(--saucisse);
+      border-radius: 10px;
+      position: absolute;
+      opacity: 0.9;
+    }
+    
+    .sausage-1 { top: 120px; left: 90px; transform: rotate(35deg); }
+    .sausage-2 { top: 130px; left: 220px; transform: rotate(-40deg); }
+    .sausage-3 { top: 230px; left: 160px; transform: rotate(5deg); }
+    
+    /* POIVRONS VERTS */
+    .pepper {
+      width: 35px;
+      height: 25px;
+      background: var(--poivron);
+      border-radius: 40% 60% 50% 50%;
+      position: absolute;
+      opacity: 0.85;
+    }
+    
+    .pepper-1 { top: 110px; left: 230px; transform: rotate(-20deg); }
+    .pepper-2 { top: 200px; left: 120px; transform: rotate(40deg); }
+    .pepper-3 { top: 240px; left: 210px; transform: rotate(-45deg); }
+    
+    /* OLIVES NOIRES */
+    .olive {
+      width: 24px;
+      height: 24px;
+      background: var(--olive);
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    .olive::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--sauce);
+      border-radius: 50%;
+      top: 9px;
+      left: 9px;
+    }
+    
+    .olive-1 { top: 150px; left: 160px; }
+    .olive-2 { top: 190px; left: 195px; }
+    .olive-3 { top: 195px; left: 220px; }
+    .olive-4 { top: 245px; left: 135px; }
+    
+    /* OIGNONS */
+    .onion {
+      width: 32px;
+      height: 32px;
+      background: var(--oignon);
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid rgba(200,180,140,0.5);
+      opacity: 0.8;
+    }
+    
+    .onion-1 { top: 115px; left: 135px; }
+    .onion-2 { top: 220px; left: 250px; }
+    .onion-3 { top: 265px; left: 115px; }
+    
+    /* FROMAGE */
+    .cheese {
+      width: 40px;
+      height: 40px;
+      background: var(--fromage);
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0.75;
+    }
+    
+    .cheese::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(200,160,0,0.4);
+      border-radius: 50%;
+      top: 12px;
+      left: 16px;
+    }
+    
+    .cheese-1 { top: 135px; left: 195px; }
+    .cheese-2 { top: 175px; left: 225px; }
+    .cheese-3 { top: 215px; left: 190px; }
+    
+    /* HARISSA */
+    .harissa {
+      width: 12px;
+      height: 12px;
+      background: var(--harissa);
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    .harissa-1 { top: 155px; left: 140px; }
+    .harissa-2 { top: 200px; left: 175px; }
+    .harissa-3 { top: 245px; left: 235px; }
+    
+    /* BASILIC FRAIS */
+    .basil {
+      width: 28px;
+      height: 32px;
+      background: var(--basilic);
+      border-radius: 50% 0 50% 0;
+      position: absolute;
+      transform: rotate(45deg);
+      opacity: 0.85;
+    }
